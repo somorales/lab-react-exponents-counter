@@ -1,7 +1,11 @@
-const ExponentSix = () => (
+const ExponentSix = (props) => (
   <div className="exponent-counter-container">
-    <p className="exponent-label">n⁶</p>
-    <p className="exponent-result">2 * 2 * 2 * 2 * 2 * 2 = <span className="total">64</span></p>
+    <p className="exponent-label">{props.contador}⁶</p>
+    <p className="exponent-result">
+      {props.contador}*{props.contador}*{props.contador}*{props.contador}*
+      {props.contador}*{props.contador}={" "}
+      <span className="total">{props.contador * props.contador* props.contador* props.contador* props.contador* props.contador}</span>
+    </p>
   </div>
 );
 
